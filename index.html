@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Santara 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #fff;
+      width: 90%;
+      max-width: 420px;
+      padding: 25px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(255, 105, 180, 0.3);
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4f8b;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #ff6fa5;
+      margin: 20px 0;
+    }
+
+    .buttons {
+      position: relative;
+      height: 80px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 22px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #ff4f8b;
+      color: white;
+      position: absolute;
+      left: 20%;
+    }
+
+    .no {
+      background: #ffe1ec;
+      color: #ff4f8b;
+      position: absolute;
+      right: 20%;
+    }
+
+    .celebrate {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff4f8b;
+      font-weight: bold;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 22px;
+      animation: float 6s linear;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Hey Santara 💖</h1>
+
+  <p>
+    From the smallest smiles to the longest late night conversations, from your calm presence to your loud laughter,
+    every single moment with you has slowly become my favorite part of life.
+    <br><br>
+    You make ordinary days feel warm and special, and difficult days feel lighter just by being you.
+    You are my comfort, my peace, my excitement, and the person I always want to come back to.
+    <br><br>
+    Santara, loving you feels easy, safe, and beautiful. I don’t just want a Valentine’s Day with you,
+    I want every memory, every silly moment, every dream, and every tomorrow with you right by my side.
+  </p>
+
+  <h2>Will you be my Valentine? 💌</h2>
+
+  <div class="buttons">
+    <button class="yes" onclick="sayYes()">Yes 😍</button>
+    <button class="no">No 🙈</button>
+  </div>
+
+  <div class="celebrate" id="celebrate">
+    🥳💖🌸 SHE SAID YES! 🌸💖🥳<br><br>
+    I love you endlessly, Santara 💕
+  </div>
+</div>
+
+<script>
+  // NO button
+
+  function sayYes() {
+    document.getElementById('celebrate').style.display = 'block';
+
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+  }
+</script>
+
+</body>
+</html>
